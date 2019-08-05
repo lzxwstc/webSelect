@@ -1,0 +1,50 @@
+
+ 【当前时间】: 2019-09-01 18:09:23                             
+ 【报错级别】：Info                                                          
+ 【出错行数】：222                                             
+ 【出错方法】：JIYITECH.WebApi.Startup.Configure                                                                              
+ 【 Message 】：{ a = 4 }                                                        
+ 【 堆 栈 】： RuntimeMethodHandle.InvokeMethod => Startup.Configure => LogHelper.Info                             
+ 【 线 程 】：                                
+ 【 名 称 】： DESKTOP-90A1KEG                             
+ 【 程序域基础目录 】： E:\Work List\JIYITECH.WebApi.ZhenHai-master\JIYITECH.WebApi\bin\Debug\netcoreapp2.2\win-x64\                             
+
+ 【当前时间】: 2019-09-01 18:09:24                             
+ 【报错级别】：Info                                                          
+ 【出错行数】：0                                             
+ 【出错方法】：Microsoft.AspNetCore.Hosting.Internal.HostingApplication.CreateContext                                                                              
+ 【 Message 】：Request starting HTTP/1.1 GET http://localhost:53440/swagger/index.html                                                          
+ 【 堆 栈 】： <ProcessRequestAsync>d__2.MoveNext => HostingApplication.CreateContext => HostingApplicationDiagnostics.LogRequestStarting                             
+ 【 线 程 】：                                
+ 【 名 称 】： DESKTOP-90A1KEG                             
+ 【 程序域基础目录 】： E:\Work List\JIYITECH.WebApi.ZhenHai-master\JIYITECH.WebApi\bin\Debug\netcoreapp2.2\win-x64\                             
+
+ 【当前时间】: 2019-09-01 18:09:24                             
+ 【报错级别】：Info                                                          
+ 【出错行数】：0                                             
+ 【出错方法】：Microsoft.AspNetCore.Hosting.Internal.HostingApplication.DisposeContext                                                                              
+ 【 Message 】：Request finished in 332.7639ms 200 text/html                                                        
+ 【 堆 栈 】： <ProcessRequestAsync>d__2.MoveNext => HostingApplication.DisposeContext => HostingApplicationDiagnostics.LogRequestFinished                             
+ 【 线 程 】：                                
+ 【 名 称 】： DESKTOP-90A1KEG                             
+ 【 程序域基础目录 】： E:\Work List\JIYITECH.WebApi.ZhenHai-master\JIYITECH.WebApi\bin\Debug\netcoreapp2.2\win-x64\                             
+
+ 【当前时间】: 2019-09-01 18:09:24                             
+ 【报错级别】：Info                                                          
+ 【出错行数】：0                                             
+ 【出错方法】：Microsoft.AspNetCore.Hosting.Internal.HostingApplication.CreateContext                                                                              
+ 【 Message 】：Request starting HTTP/1.1 GET http://localhost:53440/swagger/v1/swagger.json                                                          
+ 【 堆 栈 】： <ProcessRequestAsync>d__2.MoveNext => HostingApplication.CreateContext => HostingApplicationDiagnostics.LogRequestStarting                             
+ 【 线 程 】：                                
+ 【 名 称 】： DESKTOP-90A1KEG                             
+ 【 程序域基础目录 】： E:\Work List\JIYITECH.WebApi.ZhenHai-master\JIYITECH.WebApi\bin\Debug\netcoreapp2.2\win-x64\                             
+
+ 【当前时间】: 2019-09-01 18:09:25                             
+ 【报错级别】：Info                                                          
+ 【出错行数】：0                                             
+ 【出错方法】：Microsoft.AspNetCore.Hosting.Internal.HostingApplication.DisposeContext                                                                              
+ 【 Message 】：Request finished in 187.1616ms 200 application/json;charset=utf-8                                                        
+ 【 堆 栈 】： <ProcessRequestAsync>d__2.MoveNext => HostingApplication.DisposeContext => HostingApplicationDiagnostics.LogRequestFinished                             
+ 【 线 程 】：                                
+ 【 名 称 】： DESKTOP-90A1KEG                             
+ 【 程序域基础目录 】： E:\Work List\JIYITECH.WebApi.ZhenHai-master\JIYITECH.WebApi\bin\Debug\netcoreapp2.2\win-x64\                             

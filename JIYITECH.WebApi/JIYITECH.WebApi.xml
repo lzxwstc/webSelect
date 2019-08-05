@@ -1,0 +1,1359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JIYITECH.WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:JIYITECH.WebApi.Configs.AppConfig.PublicKey">
+            <summary>
+            jsencrypt 公钥 🔒
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Configs.AppConfig.PrivateKey">
+            <summary>
+            jsencrypt 私钥 🔑
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuController.GetMenu(System.Int32)">
+            <summary>
+            获取Menu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuController.PostMenu(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            更新Menu
+            </summary>
+            <param name="menu">菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuController.SaveMenu(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存Menu 
+            </summary>
+            <param name="roleName">角色名</param>
+            <param name="pageArr">拥有的page 页</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuController.UpdateRoleName(System.String,System.String)">
+            <summary>
+            角色换名 
+            </summary>
+            <param name="oldroleName">旧名字</param>
+            <param name="newroleName">新名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.GetPermission">
+            <summary>
+            获取所有 API 构造树形结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.GetRolePermission(System.String)">
+            <summary>
+            根据roleId 获取 API 权限
+            roleid若为多个 可为 “,”隔开数组
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.SaveRolePermission(System.Int64,System.String)">
+            <summary>
+            保存 Permission API 操作
+            pagePermission 为 “,”隔开数组
+            </summary>
+            <param name="roleId"></param>
+            <param name="pagePermission"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.Put(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            新增角色
+            </summary>
+            <param name="role">角色名</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.Delete(System.Int64)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleController.Update(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.Get(System.Int64)">
+            <summary>
+            获取User
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.Login(System.String,System.String)">
+            <summary>
+            登陆
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.ChangeUserInfo(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="user">axios对象，id用户ID,name用户名,roles用户权限数组</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            获取用户分页
+            </summary>
+            <param name="pageNumber">页码，0开始</param>
+            <param name="rowsPerPage">每页数量</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Order by排序</param>
+            <param name="parameters">parameters参数</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.Put(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="user">用户</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.GetUserInfoByToken(System.String)">
+            <summary>
+            根据token获取用户信息
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.ChangePassword(System.Int32,System.String,System.String)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="oldPassword">旧密码</param>
+            <param name="newPassword">新密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.UserController.ChangeStatus(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            更改状态
+            </summary>
+            <param name="data">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IMenuService.UpdateRoleName(System.String,System.String)">
+            <summary>
+            rolename
+            </summary>
+            <param name="oldRoleName">旧名字</param>
+            <param name="newRoleName">新名字</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IMenuService.SaveMenu(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存 角色对应菜单
+            </summary>
+            <param name="roleName">角色名</param>
+            <param name="pageArr">拥有页面数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuService.UpdateRoleName(System.String,System.String)">
+            <summary>
+            rolename 换名
+            </summary>
+            <param name="oldRoleName">旧名字</param>
+            <param name="newRoleName">新名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.MenuService.SaveMenu(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存menu
+            </summary>
+            <param name="roleName"></param>
+            <param name="pageArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.SaveRolePermission(System.Int64,System.String)">
+            <summary>
+            保存 Reole 对应 Permission API 
+            pagePermission 可为 “,”隔开数组
+            </summary>
+            <param name="roleId"></param>
+            <param name="pagePermission"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.GetRolePermission(System.String)">
+            <summary>
+            根据roleId 获取API菜单
+            roleid若为多个 可为 “,”隔开数组
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.GetPermission">
+            <summary>
+            获取所有API按钮权限操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.GetRoleList(System.String,System.Int32,System.Int32)">
+            <summary>
+            Role列表分页
+            </summary>
+            <param name="input"></param>
+            <param name="pageSize"></param>
+            <param name="pageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.RepetName(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            是否具有重复名称
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.Add(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            添加
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.Delete(System.Int64)">
+            <summary>
+            删除一个角色
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.IRoleService.Update(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            修改一个角色信息
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleService.RepetName(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            判断是否有重名 roleName
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleService.Exception(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            是否存在重复名称或错误命名
+            </summary>
+            <param name="role"></param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleService.Add(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            添加一个角色
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleService.Delete(System.Int64)">
+            <summary>
+            删除一个角色
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Controllers.RoleService.Update(JIYITECH.WebApi.Entities.Role)">
+            <summary>
+            修改一个角色信息
+            </summary>
+            <param name="role">role</param>
+            <returns></returns>
+        </member>
+        <member name="T:JIYITECH.WebApi.Entities.BaseEntity`1">
+            <summary>
+            DB表基础属性
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.createTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.createBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.updateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.updateBy">
+            <summary>
+            更新人
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.BaseEntity`1.description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JIYITECH.WebApi.Entities.CoalReport.CoalReportType">
+            <summary>
+            化验数据类型
+            </summary>
+        </member>
+        <member name="F:JIYITECH.WebApi.Entities.CoalReport.CoalReportType.LastPort">
+            <summary>
+            前港化验
+            </summary>
+        </member>
+        <member name="F:JIYITECH.WebApi.Entities.CoalReport.CoalReportType.Local">
+            <summary>
+            厂内化验
+            </summary>
+        </member>
+        <member name="F:JIYITECH.WebApi.Entities.CoalReport.CoalReportType.ThirdPart">
+            <summary>
+            第三方化验
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.coalVarietyId">
+            <summary>
+            煤种Id
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.coalVariety">
+            <summary>
+            煤种  
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.coalPrice">
+            <summary>
+            煤价
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.shipId">
+            <summary>
+            煤船Id
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.ship">
+            <summary>
+            煤船
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.shipTime">
+            <summary>
+            船次
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.type">
+            <summary>
+            化验单类型
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.shipListId">
+            <summary>
+            船运单Id
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.shipList">
+            <summary>
+            船运单
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.validate">
+            <summary>
+            化验数据有效
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.coalSampleId">
+            <summary>
+            煤样Id
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.coalSample">
+            <summary>
+            煤样
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetarMJ">
+            <summary>
+            收到基低位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrarMJ">
+            <summary>
+            收到基高位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetarKcal">
+            <summary>
+            收到基低位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrarKcal">
+            <summary>
+            收到基高位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetadMJ">
+            <summary>
+            空气干燥基低位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgradMJ">
+            <summary>
+            空气干燥基高位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetadKcal">
+            <summary>
+            空气干燥基低位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgradKcal">
+            <summary>
+            空气干燥基高位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetdMJ">
+            <summary>
+            干燥基低位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrdMJ">
+            <summary>
+            干燥基高位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetdKcal">
+            <summary>
+            干燥基低位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrdKcal">
+            <summary>
+            干燥基高位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetdafMJ">
+            <summary>
+            干燥无灰基低位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrdafMJ">
+            <summary>
+            干燥无灰基高位发热量（MJ/KG）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qnetdafKcal">
+            <summary>
+            干燥无灰基低位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.qgrdafKcal">
+            <summary>
+            干燥无灰基高位发热量（kcal/kg）
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.cad">
+            <summary>
+            空气干燥基碳含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.car">
+            <summary>
+            收到基碳含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.cd">
+            <summary>
+            干燥基碳含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.cdaf">
+            <summary>
+            干燥无灰基碳含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.had">
+            <summary>
+            空气干燥基氢含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.har">
+            <summary>
+            收到基氢含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.hd">
+            <summary>
+            干燥基氢含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.hdaf">
+            <summary>
+            干燥无灰基氢含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.nd">
+            <summary>
+            干燥基氮含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.nad">
+            <summary>
+            空气干燥基氮含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.nar">
+            <summary>
+            收到基氮含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.ndaf">
+            <summary>
+            干燥无灰基氮含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.oad">
+            <summary>
+            空气干燥基氧含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.oar">
+            <summary>
+            收到基氧含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.od">
+            <summary>
+            干燥基氧含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.odaf">
+            <summary>
+            干燥无灰基氧含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.std">
+            <summary>
+            干燥基硫含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.star">
+            <summary>
+            收到基硫含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.stad">
+            <summary>
+            空气干燥基硫含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.stdaf">
+            <summary>
+            干燥无灰基硫含量
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.st">
+            <summary>
+            软化温度
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.dt">
+            <summary>
+            变形温度
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.ft">
+            <summary>
+            流动温度
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.ht">
+            <summary>
+            半球温度
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.ad">
+            <summary>
+            干燥基灰分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.aad">
+            <summary>
+            空气干燥基灰分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.aar">
+            <summary>
+            收到基灰分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.fcd">
+            <summary>
+            干燥基固定碳
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.fcdaf">
+            <summary>
+            干燥无灰基固定碳
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.fcar">
+            <summary>
+            收到基固定碳
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.fcad">
+            <summary>
+            空气干燥基固定碳
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.vdaf">
+            <summary>
+            干燥无灰基挥发分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.vad">
+            <summary>
+            空气干燥基挥发分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.vd">
+            <summary>
+            干燥基挥发分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.var">
+            <summary>
+            收到基挥发分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.mad">
+            <summary>
+            内水分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.CoalReport.mt">
+            <summary>
+            全水分
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.Permission.permissionName">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.Permission.permissionType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.Role.roleName">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.RolePermission.roleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.RolePermission.permissionId">
+            <summary>
+            权限ID
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.RolePermission.permission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.RolePermission.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.userName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.salt">
+            <summary>
+            salt
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.enabled">
+            <summary>
+            账号是否启用
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.User.roles">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.UserRole.userId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.UserRole.roleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.UserRole.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:JIYITECH.WebApi.Entities.UserRole.user">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Add(`0)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="model">实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Head">
+            <summary>
+            获取头部第一条数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Delete(System.Int64)">
+            <summary>
+            根据ID删除一条数据
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.DeleteList(System.String,System.Object)">
+            <summary>
+            按条件删除数据
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Update(`0)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="model">实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetModel(System.Int64)">
+            <summary>
+            根据ID获取实体对象
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetModelList(System.String,System.Object)">
+            <summary>
+            根据条件获取实体对象集合
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageNumber">页码</param>
+            <param name="rowsPerPage">每页行数</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Order by排序</param>
+            <param name="parameters">parameters参数</param>
+            <returns>list 实体类列表，total 总条数</returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Count(System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合总行数
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.Get(System.String,System.Object)">
+            <summary>
+            条件检索
+            </summary>
+            <param name="strWhere">检索条件</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.AddAsync(`0)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="model">实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.HeadAsync">
+            <summary>
+            获取头部第一条数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.DeleteAsync(System.Int64)">
+            <summary>
+            根据ID删除一条数据
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.DeleteListAsync(System.String,System.Object)">
+            <summary>
+            按条件删除数据
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="model">实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetModelAsync(System.Int64)">
+            <summary>
+            根据ID获取实体对象
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetModelListAsync(System.String,System.Object)">
+            <summary>
+            根据条件获取实体对象集合
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageNumber">页码</param>
+            <param name="rowsPerPage">每页行数</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Order by排序</param>
+            <param name="parameters">parameters参数</param>
+            <returns>list 实体类列表，total 总条数</returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IBaseRepository`1.CountAsync(System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合总行数
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:JIYITECH.WebApi.Repositories.BaseRepository`1">
+            <summary>
+            仓储层基类，通过泛型实现通用的CRUD操作
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.AddAsync(`0)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="model">实例</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.DeleteAsync(System.Int64)">
+            <summary>
+            根据ID删除一条数据
+            </summary>
+            <param name="id">id</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.DeleteListAsync(System.String,System.Object)">
+            <summary>
+            按条件删除数据
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="parameters">参数</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="model">实例</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetModelAsync(System.Int64)">
+            <summary>
+            根据ID获取实体对象
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetModelListAsync(System.String,System.Object)">
+            <summary>
+            根据条件获取实体对象集合
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合
+            </summary>
+            <param name="pageNumber">页码</param>
+            <param name="rowsPerPage">每页行数</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Order by排序</param>
+            <param name="parameters">parameters参数</param>
+            <returns>list 实体类列表，total 总条数</returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.CountAsync(System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合总行数
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.HeadAsync">
+            <summary>
+            获取头部第一条数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.Add(`0)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="model">实例</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.Delete(System.Int64)">
+            <summary>
+            根据ID删除一条数据
+            </summary>
+            <param name="id">id</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.DeleteList(System.String,System.Object)">
+            <summary>
+            按条件删除数据
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.Update(`0)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="model">实例</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetModel(System.Int64)">
+            <summary>
+            根据ID获取实体对象
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetModelList(System.String,System.Object)">
+            <summary>
+            根据条件获取实体对象集合
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合
+            </summary>
+            <param name="pageNumber">页码</param>
+            <param name="rowsPerPage">每页行数</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Order by排序</param>
+            <param name="parameters">parameters参数</param>
+            <returns>list 实体类列表，total 总条数</returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.Count(System.String,System.Object)">
+            <summary>
+            根据条件分页获取实体对象集合总行数
+            </summary>
+            <param name="strWhere">条件语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.BaseRepository`1.Head">
+            <summary>
+            获取头部第一条数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IMenuRepository.SaveMenu(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存 Menu
+            </summary>
+            <param name="roleName">角色名</param>
+            <param name="pageArr">拥有菜单数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IMenuRepository.UpdateRoleName(System.String,System.String)">
+            <summary>
+            rolename 换名
+            </summary>
+            <param name="oldRoleName">旧</param>
+            <param name="newRoleName">新</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.MenuRepository.UpdateRoleName(System.String,System.String)">
+            <summary>
+            rolename 换名
+            </summary>
+            <param name="oldRoleName">旧</param>
+            <param name="newRoleName">新</param>
+            <param name="transaction">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.MenuRepository.SaveMenu(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存 Menu
+            </summary>
+            <param name="roleName">角色名</param>
+            <param name="pageArr">拥有菜单数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.MenuRepository.ChangeName(Newtonsoft.Json.Linq.JArray,System.String,System.String)">
+            <summary>
+            roleName角色换名
+            </summary>
+            <param name="jObj">数据库菜单</param>
+            <param name="oldName">旧名字</param>
+            <param name="nowName">新名字</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.MenuRepository.MenuOperation(Newtonsoft.Json.Linq.JArray,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存(增、删，改) Menu 中角色对应菜单
+            </summary>
+            <param name="jObj">数据库菜单</param>
+            <param name="roleName">角色名</param>
+            <param name="pageArr">拥有菜单数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RoleRepository.GetAll">
+            <summary>
+            获取全部用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RoleRepository.GetRoleByName(System.String)">
+            <summary>
+            根据角色名获取角色
+            </summary>
+            <param name="roleName">角色名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RoleRepository.GetRolesByUserId(System.Int64)">
+            <summary>                                      
+            根据用户id获取权限
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.Repositories.GenerateToken(System.String,JIYITECH.WebApi.Entities.User,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            生成token
+            </summary>
+            <param name="tokenSecret">jtoken密钥，勿泄露</param>
+            <param name="user">用户对象</param>
+            <param name="roles">角色List</param>
+            <param name="expireMinutes">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:JIYITECH.WebApi.Repositories.RSACrypto">
+            <summary>
+            jsencrypt 加密传输
+            加密后的文本建议前端使用 POST 请求 GET请求字符受限
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RSACrypto.#ctor(System.String,System.String)">
+            <summary>
+            私有 共有 密钥
+            </summary>
+            <param name="privateKey"></param>
+            <param name="publicKey"></param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RSACrypto.Decrypt(System.String)">
+            <summary>
+            解密文本
+            </summary>
+            <param name="cipherText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.RSACrypto.Encrypt(System.String)">
+            <summary>
+            加密文本
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.Find(System.String,System.String)">
+            <summary>
+            获取用户实体
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.CheckPermission(System.Int64,System.String)">
+            <summary>
+            权限校验
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="permissionName">权限名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.GetPermissionsByUserId(System.Int64)">
+            <summary>
+            获取所有权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.GetSaltByUserName(System.String)">
+            <summary>
+            获取用户盐值
+            </summary>
+            <param name="userName">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.ChangePassword(System.Int64,System.String,System.String)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="oldPassword">旧密码</param>
+            <param name="newPassword">新密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.ChangeStatus(System.Int64,System.Boolean)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="status">撞态</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.ChangeUserInfo(System.Int64,System.String,System.Object)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="id">用户ID</param>
+            <param name="name">用户名称</param>
+            <param name="roles">用户权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRepository.Add(JIYITECH.WebApi.Entities.User)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.GetSaltByUserName(System.String)">
+            <summary>
+            获取指定用户盐值
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.ChangePassword(System.Int64,System.String,System.String)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="userId"></param>
+            <param name="newPassword">新密码</param>
+            <param name="oldPassword">旧密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.ChangeUserInfo(System.Int64,System.String,System.Object)">
+            <summary>
+            修改用户名
+            </summary>
+            <param name="userId">用户id</param>
+            <param name="name">用户名称</param>
+            <param name="roles">用户权限数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.ChangeStatus(System.Int64,System.Boolean)">
+            <summary>
+            更改用户状态
+            </summary>
+            <param name="id">用户id</param>
+            <param name="status">是否启用</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.Add(JIYITECH.WebApi.Entities.User)">
+            <summary>
+            插入用户
+            use 'new' to hide the same method from baseRepository
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRepository.ChangeRole(System.Data.IDbConnection,System.Int64,System.Object)">
+            <summary>
+            修改用户权限
+            </summary>
+            <param name="db"></param>
+            <param name="userId">用户ID</param>
+            <param name="roleNames">用户权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRoleRepository.ChangeRoleById(System.Int64,Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            更新用户权限
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="roles">用户权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.IUserRoleRepository.Delete(System.Int64,System.Int64)">
+            <summary>
+            移除用户角色
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="roleId">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Repositories.UserRoleRepository.ChangeRoleById(System.Int64,Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            更新用户权限
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="roles">用户权限</param>
+            <returns></returns>
+        </member>
+        <member name="T:JIYITECH.WebApi.Reposotories.DisposableObject">
+            <summary>
+            Represents that the derived classes are disposable objects.
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Reposotories.DisposableObject.Finalize">
+            <summary>
+            Finalizes the object.
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Reposotories.DisposableObject.Dispose(System.Boolean)">
+            <summary>
+            Disposes the object.
+            </summary>
+            <param name="disposing">A <see cref="T:System.Boolean"/> value which indicates whether
+            the object should be disposed explicitly.</param>
+        </member>
+        <member name="M:JIYITECH.WebApi.Reposotories.DisposableObject.ExplicitDispose">
+            <summary>
+            Provides the facility that disposes the object in an explicit manner,
+            preventing the Finalizer from being called after the object has been
+            disposed explicitly.
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Reposotories.DisposableObject.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or
+            resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:JIYITECH.WebApi.Services.UserService.Login(System.String,System.String)">
+            <summary>
+            用户登陆
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Services.UserService.RemoveUser(System.Int64)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Services.UserService.Hash(System.String,System.Byte[])">
+            <summary>
+            哈希加盐
+            </summary>
+            <param name="password">密码</param>
+            <param name="salt">盐</param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Services.UserService.GenerateSalt">
+            <summary>
+             generate a 128-bit salt using a secure PRNG
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Services.UserService.GetPermissionsByUserId(System.Int64)">
+            <summary>
+            获取用户全部权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JIYITECH.WebApi.Startup.GetClassName(System.String)">
+            <summary>  
+            获取程序集中的实现类对应的多个接口
+            </summary>  
+            <param name="assemblyName">程序集</param>
+        </member>
+    </members>
+</doc>
